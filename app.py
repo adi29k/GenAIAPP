@@ -1,17 +1,13 @@
 import os
-from dotenv import load_dotenv
-
 from langchain_community.llms import Ollama
 import streamlit as st
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 
-load_dotenv()
-
 ## Langsmith Tracking
-os.environ["LANGCHAIN_API_KEY"]=os.getenv("LANGCHAIN_API_KEY")
+os.environ["LANGCHAIN_API_KEY"]="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"
 os.environ["LANGCHAIN_TRACING_V2"]="true"
-os.environ["LANGCHAIN_PROJECT"]=os.getenv("LANGCHAIN_PROJECT")
+os.environ["LANGCHAIN_PROJECT"]="GenAIAPPwithOPENAI"
 
 ## Prompt Template
 prompt=ChatPromptTemplate.from_messages(
